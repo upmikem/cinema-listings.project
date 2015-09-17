@@ -1,0 +1,183 @@
+
+
+/*
+* Shared Styles
+*/
+
+//Body
+body{
+  //background-color: #e7e7e7;
+  .page-header{border-bottom: none;}
+}
+
+
+//Headings
+h1{
+  font-weight: 600;
+  color: #666;
+}
+
+//Elements
+.label{
+  float: left;
+  padding-left: 0;
+  color: black;
+  font-size: 1em;
+}
+
+.views-field-title{
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+//Header
+
+header#navbar{
+  padding-top: 50px;
+  margin-bottom: 40px;
+  background-color: white;
+  border: none;
+  .navbar-nav{
+    width: 100%;
+    li{
+      //padding: 0 55px;
+      width: 20%;
+      text-align: center;
+      border-top: solid 1px black;
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      &.active{background-color: #e7e7e7;}
+      a{
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+        background-color: transparent;}
+    }
+  }
+}
+
+
+
+/*
+* Front Page
+*/
+
+.front{
+  h1{font-size: 1.5em;}
+  .quicktabs-wrapper{
+    width: 80%;
+    ul.quicktabs-tabs {
+      li {
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        padding: 10px 40px;
+        a{
+          color: black;
+          font-size: 1.2em;
+        }
+      }
+      li.active {
+        font-weight: bold;
+        background-color: #D8D8D8;
+      }
+    }
+    #quicktabs-container-new_releases_homepage{
+      padding: 30px 30px 100px 30px;
+      margin-top: -3px;
+      border: 1px solid black;
+      .views-row{
+        margin-bottom: 30px;
+        img{
+          float: left;
+          margin: 10px 20px 10px 0;
+        }
+        .field-content{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/*
+* Listings, New Releases and News list Pages
+*/
+
+.page-listings,
+.page-new-releases,
+.page-film-news{
+  .views-row {
+    margin-bottom: 30px;
+    img {
+      float: left;
+      margin: 10px 20px 10px 0;
+    }
+    .field-content{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+/*
+* Cinema details page
+*/
+
+.node-type-cinema-details{
+    .field.field-name-field-cinema-details-map.field-type-text.field-label-hidden {
+      float: left;
+      margin-right: 30px;
+    }
+    .field-group-format-wrapper{
+      font-size: 1.5em;
+    }
+    .field-name-field-cinema-details-telephone{
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+}
+
+
+
+
+
+/*
+* Footer
+*/
+
+.footer{
+  ul{
+    width: 50%;
+    margin: 0 auto;
+    li{
+      width: 33.333%;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      list-style: none;
+      text-decoration: underline;
+      &:first-child:before {
+        content: " ";
+        float: left;
+      }
+      &:before {
+        content: "|";
+        float: left;
+        font-size: 2em;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,151 @@
+/*
+* Shared Styles
+*/
+/* line 10, ../sass/style.scss */
+body .page-header {
+  border-bottom: none; }
+
+/* line 15, ../sass/style.scss */
+h1 {
+  font-weight: 600;
+  color: #666; }
+
+/* line 21, ../sass/style.scss */
+.label {
+  float: left;
+  padding-left: 0;
+  color: black;
+  font-size: 1em; }
+
+/* line 28, ../sass/style.scss */
+.views-field-title {
+  font-size: 1.5em;
+  font-weight: 600; }
+
+/* line 35, ../sass/style.scss */
+header#navbar {
+  padding-top: 50px;
+  margin-bottom: 40px;
+  background-color: white;
+  border: none; }
+  /* line 40, ../sass/style.scss */
+  header#navbar .navbar-nav {
+    width: 100%; }
+    /* line 42, ../sass/style.scss */
+    header#navbar .navbar-nav li {
+      width: 20%;
+      text-align: center;
+      border-top: solid 1px black;
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px; }
+      /* line 51, ../sass/style.scss */
+      header#navbar .navbar-nav li.active {
+        background-color: #e7e7e7; }
+      /* line 52, ../sass/style.scss */
+      header#navbar .navbar-nav li a {
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em;
+        background-color: transparent; }
+
+/*
+* Front Page
+*/
+/* line 68, ../sass/style.scss */
+.front h1 {
+  font-size: 1.5em; }
+/* line 69, ../sass/style.scss */
+.front .quicktabs-wrapper {
+  width: 80%; }
+  /* line 72, ../sass/style.scss */
+  .front .quicktabs-wrapper ul.quicktabs-tabs li {
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px 40px; }
+    /* line 77, ../sass/style.scss */
+    .front .quicktabs-wrapper ul.quicktabs-tabs li a {
+      color: black;
+      font-size: 1.2em; }
+  /* line 82, ../sass/style.scss */
+  .front .quicktabs-wrapper ul.quicktabs-tabs li.active {
+    font-weight: bold;
+    background-color: #D8D8D8; }
+  /* line 87, ../sass/style.scss */
+  .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage {
+    padding: 30px 30px 100px 30px;
+    margin-top: -3px;
+    border: 1px solid black; }
+    /* line 91, ../sass/style.scss */
+    .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row {
+      margin-bottom: 30px; }
+      /* line 93, ../sass/style.scss */
+      .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row img {
+        float: left;
+        margin: 10px 20px 10px 0; }
+      /* line 97, ../sass/style.scss */
+      .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row .field-content {
+        margin-bottom: 10px; }
+
+/*
+* Listings, New Releases and News list Pages
+*/
+/* line 115, ../sass/style.scss */
+.page-listings .views-row,
+.page-new-releases .views-row,
+.page-film-news .views-row {
+  margin-bottom: 30px; }
+  /* line 117, ../sass/style.scss */
+  .page-listings .views-row img,
+  .page-new-releases .views-row img,
+  .page-film-news .views-row img {
+    float: left;
+    margin: 10px 20px 10px 0; }
+  /* line 121, ../sass/style.scss */
+  .page-listings .views-row .field-content,
+  .page-new-releases .views-row .field-content,
+  .page-film-news .views-row .field-content {
+    margin-bottom: 10px; }
+
+/*
+* Cinema details page
+*/
+/* line 133, ../sass/style.scss */
+.node-type-cinema-details .field.field-name-field-cinema-details-map.field-type-text.field-label-hidden {
+  float: left;
+  margin-right: 30px; }
+/* line 137, ../sass/style.scss */
+.node-type-cinema-details .field-group-format-wrapper {
+  font-size: 1.5em; }
+/* line 140, ../sass/style.scss */
+.node-type-cinema-details .field-name-field-cinema-details-telephone {
+  margin-top: 10px;
+  font-size: 1.5em; }
+
+/*
+* Footer
+*/
+/* line 155, ../sass/style.scss */
+.footer ul {
+  width: 50%;
+  margin: 0 auto; }
+  /* line 158, ../sass/style.scss */
+  .footer ul li {
+    width: 33.333%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+    list-style: none;
+    text-decoration: underline; }
+    /* line 165, ../sass/style.scss */
+    .footer ul li:first-child:before {
+      content: " ";
+      float: left; }
+    /* line 169, ../sass/style.scss */
+    .footer ul li:before {
+      content: "|";
+      float: left;
+      font-size: 2em;
+      font-weight: 100; }
