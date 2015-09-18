@@ -31,7 +31,7 @@ body{
   .main-container.container {
     border-width: 1px;
     border-style: solid;
-    border-image: linear-gradient(to top, white, rgba(0, 0, 0, 0)) 1 50%;
+    border-image: linear-gradient(to top, white, rgba(0, 0, 0, 0)) 1 100%;
   }
 }
 
@@ -74,8 +74,6 @@ header#navbar{
   border-left: none;
   border-right: none;
   border-bottom: 3px solid $tabs-active-bg;
-
-
   .navbar-nav{
     width: 100%;
     li{
@@ -144,8 +142,7 @@ header#navbar{
         padding: 10px 40px;
         background-color: white;
         &:hover{
-          font-weight: bold;
-          background-color: $tabs-active-bg;
+         background-color: $tabs-active-bg;
         }
         a{
           color: red;
@@ -160,12 +157,15 @@ header#navbar{
     #quicktabs-container-new_releases_homepage{
       padding: 30px 30px 100px 30px;
       margin-top: -3px;
-      border-top: 3px solid $tabs-active-bg;
+      border-top: 1px solid $tabs-active-bg;
       .views-row{
         margin-bottom: 30px;
         img{
           float: left;
           margin: 0 20px 30px 0;
+        }
+        .views-field-field-movie-title-release-date{
+          margin-top: 10px;
         }
       }
     }
@@ -173,19 +173,51 @@ header#navbar{
 }
 
 
-/*
-* Listings, New Releases and News list Pages
-*/
+// Cinema listings
 
-.page-listings,
-.page-new-releases,
-.page-film-news{
+.page-listings{
   .views-row {
-    margin-bottom: 30px;
-    img{
-      float: left;
-      margin: 0 20px 30px 0;
+    padding-top: 30px;
+    padding-bottom: 180px;
+    border-bottom: solid 1px $tabs-active-bg;
+      img{
+        float: left;
+        margin: 0 20px 30px 0;
+      }
     }
+  // Ratings
+  .u,
+  .pg,
+  .twelve,
+  .fifteen,
+  .eighteen{
+    background-repeat: no-repeat;
+    padding: 30px;
+    display: block;
+    float:  left;
+    span{display: none;}
+  }
+  .u{background-image: url("../images/you.png");}
+  .pg{background-image: url("../images/PG.png");}
+  .twelve{background-image: url("../images/12A.png");}
+  .fifteen{background-image: url("../images/15.png");}
+  .eighteen{background-image: url("../images/18.png");}
+  // Fields
+  .views-field-title{clear: none;}
+  .views-field-field-movie-title-actors{
+    float: left;
+    margin-left: 61px;
+    display: block;
+    margin-top: 10px;
+    width: 300px;
+  }
+  .views-field-field-movie-title-plot {
+    float: left;
+    width: 815px;
+  }
+  .views-field-field-movie-title-release-date{display: none;}
+  .views-field.views-field-field-movie-title-image {
+    clear: both;
   }
 }
 
@@ -210,11 +242,59 @@ header#navbar{
 
 
 /*
+* New releases page
+*/
+.page-new-releases{
+  .views-row {
+    padding-top: 30px;
+    padding-bottom: 180px;
+    border-bottom: solid 1px $tabs-active-bg;
+    img {
+      float: left;
+      margin: 0 20px 30px 0;
+    }
+  }
+  .views-field-title{clear: none;}
+  .views-field.views-field-field-movie-title-image {
+    clear: both;
+  }
+  .views-field-field-movie-title-plot {
+    float: left;
+    width: 895px;
+  }
+  .views-field-field-movie-title-release-date,
+  .views-field-field-movie-title-actors{
+    float: left;
+    display: block;
+    margin-top: 5px;
+    width: 895px;
+  }
+}
+
+
+
+/*
+* News articles page
+*/
+
+.page-film-news{
+  .views-row {
+    padding-top: 30px;
+    padding-bottom: 80px;
+    border-bottom: solid 1px $tabs-active-bg;
+    img{
+      float: left;
+      margin: 0 20px 30px 0;
+    }
+  }
+}
+
+/*
 * Footer
 */
 
 .footer{
-  border: none;
+  margin-top: 0;
   ul{
     width: 50%;
     margin: 0 auto;

@@ -12,7 +12,7 @@ body {
   body .main-container.container {
     border-width: 1px;
     border-style: solid;
-    border-image: linear-gradient(to top, white, transparent) 1 50%; }
+    border-image: linear-gradient(to top, white, transparent) 1 100%; }
 
 /* line 40, ../sass/style.scss */
 h1 {
@@ -51,10 +51,10 @@ header#navbar {
   border-left: none;
   border-right: none;
   border-bottom: 3px solid #e7e7e7; }
-  /* line 79, ../sass/style.scss */
+  /* line 77, ../sass/style.scss */
   header#navbar .navbar-nav {
     width: 100%; }
-    /* line 81, ../sass/style.scss */
+    /* line 79, ../sass/style.scss */
     header#navbar .navbar-nav li {
       background-color: white;
       width: 20%;
@@ -64,29 +64,29 @@ header#navbar {
       border-right: solid 1px black;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px; }
-      /* line 90, ../sass/style.scss */
+      /* line 88, ../sass/style.scss */
       header#navbar .navbar-nav li.active, header#navbar .navbar-nav li:hover {
         background-color: #e7e7e7; }
-      /* line 92, ../sass/style.scss */
+      /* line 90, ../sass/style.scss */
       header#navbar .navbar-nav li a {
         font-weight: bold;
         color: red;
         font-size: 1.2em;
         background-color: transparent; }
-        /* line 97, ../sass/style.scss */
+        /* line 95, ../sass/style.scss */
         header#navbar .navbar-nav li a:hover {
           color: #ba0000; }
 
 /*
 * Front Page
 */
-/* line 112, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .front h1 {
   font-size: 1.5em; }
-/* line 113, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .front h2 {
   margin: 0 0 20px 0; }
-/* line 116, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .front .carousel .views-field.views-field-field-movie-title-plot,
 .front .carousel .views-field-title {
   background: black;
@@ -94,92 +94,184 @@ header#navbar {
   position: absolute;
   width: 500px;
   margin-left: 30px; }
-/* line 124, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .front .carousel .views-field.views-field-field-movie-title-plot {
   margin-top: -200px;
   padding: 10px 10px 0 10px;
   font-size: 1.5em; }
-/* line 129, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .front .carousel .views-field-title {
   margin-top: -102px;
   color: red;
   padding: 0 10px 10px 10px;
   font-size: 2em; }
-/* line 137, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 .front .quicktabs-wrapper {
   margin-top: 50px; }
-  /* line 141, ../sass/style.scss */
+  /* line 139, ../sass/style.scss */
   .front .quicktabs-wrapper ul.quicktabs-tabs li {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     padding: 10px 40px;
     background-color: white; }
-    /* line 146, ../sass/style.scss */
+    /* line 144, ../sass/style.scss */
     .front .quicktabs-wrapper ul.quicktabs-tabs li:hover {
-      font-weight: bold;
       background-color: #e7e7e7; }
-    /* line 150, ../sass/style.scss */
+    /* line 147, ../sass/style.scss */
     .front .quicktabs-wrapper ul.quicktabs-tabs li a {
       color: red;
       font-size: 1.2em; }
-  /* line 155, ../sass/style.scss */
+  /* line 152, ../sass/style.scss */
   .front .quicktabs-wrapper ul.quicktabs-tabs li.active {
     font-weight: bold;
     background-color: #e7e7e7; }
-  /* line 160, ../sass/style.scss */
+  /* line 157, ../sass/style.scss */
   .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage {
     padding: 30px 30px 100px 30px;
     margin-top: -3px;
-    border-top: 3px solid #e7e7e7; }
-    /* line 164, ../sass/style.scss */
+    border-top: 1px solid #e7e7e7; }
+    /* line 161, ../sass/style.scss */
     .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row {
       margin-bottom: 30px; }
-      /* line 166, ../sass/style.scss */
+      /* line 163, ../sass/style.scss */
       .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row img {
         float: left;
         margin: 0 20px 30px 0; }
+      /* line 167, ../sass/style.scss */
+      .front .quicktabs-wrapper #quicktabs-container-new_releases_homepage .views-row .views-field-field-movie-title-release-date {
+        margin-top: 10px; }
 
-/*
-* Listings, New Releases and News list Pages
-*/
-/* line 183, ../sass/style.scss */
-.page-listings .views-row,
-.page-new-releases .views-row,
-.page-film-news .views-row {
-  margin-bottom: 30px; }
-  /* line 185, ../sass/style.scss */
-  .page-listings .views-row img,
-  .page-new-releases .views-row img,
-  .page-film-news .views-row img {
+/* line 179, ../sass/style.scss */
+.page-listings .views-row {
+  padding-top: 30px;
+  padding-bottom: 180px;
+  border-bottom: solid 1px #e7e7e7; }
+  /* line 183, ../sass/style.scss */
+  .page-listings .views-row img {
     float: left;
     margin: 0 20px 30px 0; }
+/* line 189, ../sass/style.scss */
+.page-listings .u,
+.page-listings .pg,
+.page-listings .twelve,
+.page-listings .fifteen,
+.page-listings .eighteen {
+  background-repeat: no-repeat;
+  padding: 30px;
+  display: block;
+  float: left; }
+  /* line 198, ../sass/style.scss */
+  .page-listings .u span,
+  .page-listings .pg span,
+  .page-listings .twelve span,
+  .page-listings .fifteen span,
+  .page-listings .eighteen span {
+    display: none; }
+/* line 200, ../sass/style.scss */
+.page-listings .u {
+  background-image: url("../images/you.png"); }
+/* line 201, ../sass/style.scss */
+.page-listings .pg {
+  background-image: url("../images/PG.png"); }
+/* line 202, ../sass/style.scss */
+.page-listings .twelve {
+  background-image: url("../images/12A.png"); }
+/* line 203, ../sass/style.scss */
+.page-listings .fifteen {
+  background-image: url("../images/15.png"); }
+/* line 204, ../sass/style.scss */
+.page-listings .eighteen {
+  background-image: url("../images/18.png"); }
+/* line 206, ../sass/style.scss */
+.page-listings .views-field-title {
+  clear: none; }
+/* line 207, ../sass/style.scss */
+.page-listings .views-field-field-movie-title-actors {
+  float: left;
+  margin-left: 61px;
+  display: block;
+  margin-top: 10px;
+  width: 300px; }
+/* line 214, ../sass/style.scss */
+.page-listings .views-field-field-movie-title-plot {
+  float: left;
+  width: 815px; }
+/* line 218, ../sass/style.scss */
+.page-listings .views-field-field-movie-title-release-date {
+  display: none; }
+/* line 219, ../sass/style.scss */
+.page-listings .views-field.views-field-field-movie-title-image {
+  clear: both; }
 
 /*
 * Cinema details page
 */
-/* line 198, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .node-type-cinema-details .field.field-name-field-cinema-details-map.field-type-text.field-label-hidden {
   float: left;
   margin-right: 30px; }
-/* line 202, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .node-type-cinema-details .field-group-format-wrapper {
   font-size: 1.5em; }
-/* line 205, ../sass/style.scss */
+/* line 237, ../sass/style.scss */
 .node-type-cinema-details .field-name-field-cinema-details-telephone {
   margin-top: 10px;
   font-size: 1.5em; }
 
 /*
+* New releases page
+*/
+/* line 248, ../sass/style.scss */
+.page-new-releases .views-row {
+  padding-top: 30px;
+  padding-bottom: 180px;
+  border-bottom: solid 1px #e7e7e7; }
+  /* line 252, ../sass/style.scss */
+  .page-new-releases .views-row img {
+    float: left;
+    margin: 0 20px 30px 0; }
+/* line 257, ../sass/style.scss */
+.page-new-releases .views-field-title {
+  clear: none; }
+/* line 258, ../sass/style.scss */
+.page-new-releases .views-field.views-field-field-movie-title-image {
+  clear: both; }
+/* line 261, ../sass/style.scss */
+.page-new-releases .views-field-field-movie-title-plot {
+  float: left;
+  width: 895px; }
+/* line 265, ../sass/style.scss */
+.page-new-releases .views-field-field-movie-title-release-date,
+.page-new-releases .views-field-field-movie-title-actors {
+  float: left;
+  display: block;
+  margin-top: 5px;
+  width: 895px; }
+
+/*
+* News articles page
+*/
+/* line 281, ../sass/style.scss */
+.page-film-news .views-row {
+  padding-top: 30px;
+  padding-bottom: 80px;
+  border-bottom: solid 1px #e7e7e7; }
+  /* line 285, ../sass/style.scss */
+  .page-film-news .views-row img {
+    float: left;
+    margin: 0 20px 30px 0; }
+
+/*
 * Footer
 */
-/* line 216, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 .footer {
-  border: none; }
-  /* line 218, ../sass/style.scss */
+  margin-top: 0; }
+  /* line 298, ../sass/style.scss */
   .footer ul {
     width: 50%;
     margin: 0 auto; }
-    /* line 221, ../sass/style.scss */
+    /* line 301, ../sass/style.scss */
     .footer ul li {
       width: 33.333%;
       text-align: center;
@@ -187,11 +279,11 @@ header#navbar {
       float: left;
       list-style: none;
       text-decoration: underline; }
-      /* line 228, ../sass/style.scss */
+      /* line 308, ../sass/style.scss */
       .footer ul li:first-child:before {
         content: " ";
         float: left; }
-      /* line 232, ../sass/style.scss */
+      /* line 312, ../sass/style.scss */
       .footer ul li:before {
         content: "|";
         float: left;
