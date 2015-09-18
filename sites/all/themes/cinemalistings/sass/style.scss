@@ -1,4 +1,23 @@
+// Bootstrap library.
 
+//@import 'bootstrap.sass';
+
+// Base-theme overrides.
+
+//@import 'overrides.sass';
+
+// Theme specific.
+
+//@import 'header.sass';
+//@import 'content..sass';
+//@import 'footer.sass';
+//@import 'variables.sass';
+
+//Variables
+$body-bg: #000;
+$primary-colour: red;
+$tabs-bg: #fff;
+$tabs-active-bg: #e7e7e7;
 
 /*
 * Shared Styles
@@ -6,8 +25,14 @@
 
 //Body
 body{
-  //background-color: #e7e7e7;
+  background-color: black;
   .page-header{border-bottom: none;}
+  color: #D8D8D8;
+  .main-container.container {
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(to top, white, rgba(0, 0, 0, 0)) 1 50%;
+  }
 }
 
 
@@ -16,18 +41,28 @@ h1{
   font-weight: 600;
   color: #666;
 }
+h2{font-size: 1.8em;}
 
 //Elements
 .label{
   float: left;
   padding-left: 0;
-  color: black;
+  color: white;
   font-size: 1em;
 }
 
 .views-field-title{
+  clear: both;
   font-size: 1.5em;
   font-weight: 600;
+}
+
+//Links
+a{
+  color: red;
+  &:hover{
+  color:  darken($primary-colour, 13.5%);
+  }
 }
 
 //Header
@@ -35,12 +70,16 @@ h1{
 header#navbar{
   padding-top: 50px;
   margin-bottom: 40px;
-  background-color: white;
-  border: none;
+  background-color: black;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid $tabs-active-bg;
+
+
   .navbar-nav{
     width: 100%;
     li{
-      //padding: 0 55px;
+      background-color: white;
       width: 20%;
       text-align: center;
       border-top: solid 1px black;
@@ -48,12 +87,17 @@ header#navbar{
       border-right: solid 1px black;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      &.active{background-color: #e7e7e7;}
+      &.active,
+      &:hover{background-color: $tabs-active-bg;}
       a{
         font-weight: bold;
-        color: black;
+        color: red;
         font-size: 1.2em;
-        background-color: transparent;}
+        background-color: transparent;
+        &:hover{
+          color:  darken($primary-colour, 13.5%);
+        }
+      }
     }
   }
 }
@@ -66,43 +110,67 @@ header#navbar{
 
 .front{
   h1{font-size: 1.5em;}
+  h2{margin: 0 0 20px 0;}
+  //carousel
+  .carousel{
+    .views-field.views-field-field-movie-title-plot,
+    .views-field-title{
+      background: black;
+      background:rgba(0,0,0,0.5);
+      position: absolute;
+      width: 500px;
+      margin-left: 30px;
+    }
+    .views-field.views-field-field-movie-title-plot{
+      margin-top: -200px;
+      padding: 10px 10px 0 10px;
+      font-size: 1.5em;
+    }
+    .views-field-title{
+      margin-top: -102px;
+      color: $primary-colour;
+      padding: 0 10px 10px 10px;
+      font-size: 2em;
+      }
+  }
+// tabs box
   .quicktabs-wrapper{
-    width: 80%;
+    //width: 80%;
+    margin-top: 50px;
     ul.quicktabs-tabs {
       li {
-        border-left: 1px solid black;
-        border-top: 1px solid black;
-        border-right: 1px solid black;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         padding: 10px 40px;
+        background-color: white;
+        &:hover{
+          font-weight: bold;
+          background-color: $tabs-active-bg;
+        }
         a{
-          color: black;
+          color: red;
           font-size: 1.2em;
         }
       }
-      li.active {
+      li.active{
         font-weight: bold;
-        background-color: #D8D8D8;
+        background-color: $tabs-active-bg;
       }
     }
     #quicktabs-container-new_releases_homepage{
       padding: 30px 30px 100px 30px;
       margin-top: -3px;
-      border: 1px solid black;
+      border-top: 3px solid $tabs-active-bg;
       .views-row{
         margin-bottom: 30px;
         img{
           float: left;
-          margin: 10px 20px 10px 0;
-        }
-        .field-content{
-          margin-bottom: 10px;
+          margin: 0 20px 30px 0;
         }
       }
     }
   }
 }
-
-
 
 
 /*
@@ -114,12 +182,9 @@ header#navbar{
 .page-film-news{
   .views-row {
     margin-bottom: 30px;
-    img {
+    img{
       float: left;
-      margin: 10px 20px 10px 0;
-    }
-    .field-content{
-      margin-bottom: 10px;
+      margin: 0 20px 30px 0;
     }
   }
 }
@@ -144,14 +209,12 @@ header#navbar{
 }
 
 
-
-
-
 /*
 * Footer
 */
 
 .footer{
+  border: none;
   ul{
     width: 50%;
     margin: 0 auto;
