@@ -25,10 +25,11 @@ $tabs-active-bg: #e7e7e7;
 
 //Body
 body{
+
+  color: #D8D8D8;
   background-color: black;
   .page-header{border-bottom: none;}
-  color: #D8D8D8;
-  .main-container.container {
+    .main-container.container {
     border-width: 1px;
     border-style: solid;
     border-image: linear-gradient(to top, white, rgba(0, 0, 0, 0)) 1 100%;
@@ -71,14 +72,20 @@ header#navbar{
   padding-top: 50px;
   margin-bottom: 40px;
   background-color: black;
+  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 3px solid $tabs-active-bg;
   .navbar-nav{
     width: 100%;
     li{
+      //adjust height for larger screens
+      @media screen and (min-width:1150px) {
+        height: 50px;
+      }
       background-color: white;
       width: 20%;
+      height: 65px;
       text-align: center;
       border-top: solid 1px black;
       border-left: solid 1px black;
@@ -88,8 +95,8 @@ header#navbar{
       &.active,
       &:hover{background-color: $tabs-active-bg;}
       a{
-        font-weight: bold;
         color: red;
+        font-weight: bold;
         font-size: 1.2em;
         background-color: transparent;
         &:hover{
@@ -99,7 +106,6 @@ header#navbar{
     }
   }
 }
-
 
 
 /*
@@ -164,6 +170,7 @@ header#navbar{
           float: left;
           margin: 0 20px 30px 0;
         }
+        .field-content{font-size: 1.2em;}
         .views-field-field-movie-title-release-date{
           margin-top: 10px;
         }
@@ -178,12 +185,18 @@ header#navbar{
 .page-listings{
   .views-row {
     padding-top: 30px;
-    padding-bottom: 180px;
+    padding-bottom: 365px;
     border-bottom: solid 1px $tabs-active-bg;
+    //adjust padding for larger screens
+    @media screen and (min-width:1150px) {
+    padding-top: 30px;
+    padding-bottom: 180px;
+    }
       img{
         float: left;
         margin: 0 20px 30px 0;
       }
+    .field-content{font-size: 1.2em;}
     }
   // Ratings
   .u,
@@ -226,7 +239,8 @@ header#navbar{
 * Cinema details page
 */
 
-.node-type-cinema-details{
+.node-type-cinema-details,
+.page-cinemas{
     .field.field-name-field-cinema-details-map.field-type-text.field-label-hidden {
       float: left;
       margin-right: 30px;
@@ -238,7 +252,70 @@ header#navbar{
       margin-top: 10px;
       font-size: 1.5em;
     }
+  .field-name-field-cinema-details-showing{
+    .field-label{
+      margin: 20px 0 10px 10px;
+      font-size: 2em;
+      color: $primary-colour;
+    }
+    .field-name-field-cinema-details-movie{
+      float: left;
+      font-weight: 700;
+      width: 320px;
+      border: solid 1px $primary-colour;
+      padding: 3px;
+      text-align: center;
+    }
+    .date-display-single{
+      float: left;
+      width: 130px;
+      border: solid 1px $primary-colour;
+      padding: 3px;
+      text-align: center;
+    }
+    .field-collection-view{
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+  .field-collection-container{
+    border-bottom: none;
+  }
 }
+
+/*
+* Movie titles pages
+*/
+.node-type-movie-titles{
+  .field.field-name-field-movie-title-plot,
+  .field.field-name-field-movie-title-actors,
+  .field.field-name-field-movie-title-release-date,
+  .field.field-name-field-movie-review-rating{
+    padding: 5px 20px;
+    @media screen and (min-width:1150px) {
+      width: 40%;
+      position: absolute;
+      background: black;
+      background:rgba(0,0,0,0.5);
+      font-size: 1.3em;
+    }
+  }
+  .field.field-name-field-movie-title-plot{@media screen and (min-width:1150px) {margin-top: -350px;}}
+  .field.field-name-field-movie-title-actors{@media screen and (min-width:1150px) {margin-top: -233px;}}
+  .field.field-name-field-movie-title-release-date{@media screen and (min-width:1150px) {margin-top: -170px;}}
+  .field.field-name-field-movie-review-rating{@media screen and (min-width:1150px) {margin-top: -133px;}}
+  section#block-views-linked-cinemas-block{
+    padding: 0 20px 30px 20px;
+    background-color: #333;
+    width: 450px;
+    margin: 50px 0;
+  }
+  img{
+    width: 100%;
+    max-width: 800px;
+  }
+}
+
 
 
 /*
@@ -247,12 +324,18 @@ header#navbar{
 .page-new-releases{
   .views-row {
     padding-top: 30px;
-    padding-bottom: 180px;
+    padding-bottom: 365px;
     border-bottom: solid 1px $tabs-active-bg;
+    //adjust padding for larger screens
+    @media screen and (min-width:1150px) {
+      padding-top: 30px;
+      padding-bottom: 180px;
+    }
     img {
       float: left;
       margin: 0 20px 30px 0;
     }
+    //.field-content{font-size: 1.1em;}
   }
   .views-field-title{clear: none;}
   .views-field.views-field-field-movie-title-image {
@@ -280,12 +363,13 @@ header#navbar{
 .page-film-news{
   .views-row {
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     border-bottom: solid 1px $tabs-active-bg;
     img{
       float: left;
       margin: 0 20px 30px 0;
     }
+    .field-items{font-size: 1.2em;}
   }
 }
 
@@ -296,10 +380,13 @@ header#navbar{
 .footer{
   margin-top: 0;
   ul{
-    width: 50%;
+    //adjust width for larger screens
+    @media screen and (min-width:1150px) {
+      width: 600px;
+    }
     margin: 0 auto;
     li{
-      width: 33.333%;
+      width: 33%;
       text-align: center;
       display: inline-block;
       float: left;
